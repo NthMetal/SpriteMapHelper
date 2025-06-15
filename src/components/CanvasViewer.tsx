@@ -46,6 +46,7 @@ const CanvasViewer: React.FC<CanvasViewerProps> = ({
   // Load image
   useEffect(() => {
     if (!imageSrc) {
+      console.log(imageBuffer);
       setLoadedImage(null);
       setImageBuffer(null);
       return;

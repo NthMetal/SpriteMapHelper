@@ -65,9 +65,6 @@ function App() {
 
   const downloadMap = async () => {
     if (!mapImage) return;
-    const [mapResp] = await Promise.all([
-      fetch(mapImage).then(res => res.arrayBuffer()),
-    ]);
 
     // 1. Fetch original PNG as ArrayBuffer
     const buffer = await fetch(mapImage).then((res) => res.arrayBuffer());
